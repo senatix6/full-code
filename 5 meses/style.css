@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f0f0f0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#upload {
+  margin-top: 10px;
+}
+
+#puzzle {
+  display: grid;
+  gap: 2px;
+  margin-top: 40px; /* antes era 20px */
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+
+.piece {
+  background-repeat: no-repeat;
+  border: 1px solid #999;
+  cursor: grab;
+  background-size: cover;
+}
+
+.piece.highlight {
+  outline: 3px solid #ff4081;
+}
+
+#message {
+  margin-top: 30px;
+  font-size: 1.7em;
+  color: #d6006e;
+  display: none;
+  text-align: center;
+}
+
+.heart {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  font-size: 24px;
+  animation: floatUp 3s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px) scale(1.5);
+    opacity: 0;
+  }
+}
